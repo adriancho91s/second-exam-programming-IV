@@ -20,10 +20,12 @@ class Habitacion:
     def nombrar_habitacion(self):
         raise NotImplementedError("Este método debe ser implementado en la subclase.")
 
+
 # Clase HabitacionSimple
 class HabitacionSimple(Habitacion):
     def nombrar_habitacion(self):
         return "Habitacion Simple"
+
 
 # Clase HabitacionDoble
 class HabitacionDoble(Habitacion):
@@ -40,6 +42,7 @@ class HabitacionDoble(Habitacion):
     def nombrar_habitacion(self):
         return "Habitacion Doble"
 
+
 # Clase Suite
 class Suite(Habitacion):
     def __init__(self, numero, precio, estado="Disponible"):
@@ -55,16 +58,19 @@ class Suite(Habitacion):
     def nombrar_habitacion(self):
         return "Suite"
 
+
 # Función para mostrar habitaciones disponibles
 def mostrar_habitaciones_disponibles(habitaciones):
     print("\nHabitaciones disponibles:")
     disponibles = False
     for habitacion in habitaciones.values():
         if habitacion.obtener_estado() == "Disponible":
-            print(f"Habitación {habitacion.obtener_numero()}: {habitacion.nombrar_habitacion()}, Precio: {habitacion.obtener_precio()}")
+            print(
+                f"Habitación {habitacion.obtener_numero()}: {habitacion.nombrar_habitacion()}, Precio: {habitacion.obtener_precio()}")
             disponibles = True
     if not disponibles:
         print("No hay habitaciones disponibles.")
+
 
 # Función para reservar una habitación
 def reservar_habitacion(habitaciones, numero_habitacion):
@@ -78,27 +84,31 @@ def reservar_habitacion(habitaciones, numero_habitacion):
     else:
         print(f"La habitación {numero_habitacion} no existe.")
 
+
 # Función para calcular el precio total de una habitación con servicios adicionales
 def calcular_precio_total(habitaciones, numero_habitacion):
     if numero_habitacion in habitaciones:
         habitacion = habitaciones[numero_habitacion]
         if isinstance(habitacion, (HabitacionDoble, Suite)):
-            print(f"Precio total de la habitación {numero_habitacion} con servicios adicionales: {habitacion.calcular_precio_total()}")
+            print(
+                f"Precio total de la habitación {numero_habitacion} con servicios adicionales: {habitacion.calcular_precio_total()}")
         else:
-            print(f"La habitación {numero_habitacion} es una {habitacion.nombrar_habitacion()} y no tiene servicios adicionales.")
+            print(
+                f"La habitación {numero_habitacion} es una {habitacion.nombrar_habitacion()} y no tiene servicios adicionales.")
     else:
         print(f"La habitación {numero_habitacion} no existe.")
 
 
 def mostrar_numeros_habitaciones_disponibles(habitaciones):
-  print("\nHabitaciones Disponibles:")
-  disponibles = False
-  for habitacion in habitaciones.values():
-    if habitacion.obtener_estado() == "Disponible":
-      disponibles = True
-      print(f"{habitacion.obtener_numero()} - ", end="")
-  if not disponibles:
-    print("No hay habitaciones disponibles\n")
+    print("\nHabitaciones Disponibles:")
+    disponibles = False
+    for habitacion in habitaciones.values():
+        if habitacion.obtener_estado() == "Disponible":
+            disponibles = True
+            print(f"{habitacion.obtener_numero()} - ", end="")
+    if not disponibles:
+        print("No hay habitaciones disponibles\n")
+
 
 # Función para inicializar las habitaciones en el sistema
 def inicializar_habitaciones():
@@ -130,7 +140,7 @@ def main():
     4. Salir.
     Digite una opcion: '''))
 
-            match(opcion):
+            match (opcion):
                 case 1:
                     mostrar_habitaciones_disponibles(habitaciones)
                 case 2:
@@ -147,6 +157,7 @@ def main():
                     print("Opción ingresada inválida, por favor digite una opción válida.\n")
         except ValueError:
             print("Por favor, ingrese un número válido.")
+
 
 # Llamada a la función principal
 if __name__ == "__main__":

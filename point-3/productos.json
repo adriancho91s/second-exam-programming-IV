@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "nombre": "Laptop",
+        "precio": 1200,
+        "cantidad": 10,
+        "tipo": "Electronico",
+        "periodo_de_garantia": 2
+    },
+    {
+        "nombre": "Camiseta",
+        "precio": 20,
+        "cantidad": 50,
+        "tipo": "Ropa",
+        "tamanio": "M"
+    },
+    {
+        "nombre": "Pizza Congelada",
+        "precio": 8,
+        "cantidad": 100,
+        "tipo": "Alimento",
+        "fecha_de_caducidad": "2024-12-01"
+    }
+]

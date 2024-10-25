@@ -2,6 +2,7 @@ from product import Producto, Electronico, Ropa, Alimento
 from product_handler import GestorPedidos
 from file_manager import GestorArchivos
 
+
 def main():
     gestor_pedidos = GestorPedidos()
     gestor_archivos = GestorArchivos("productos.json")
@@ -44,6 +45,7 @@ def main():
                 print("Opción no válida.")
         except ValueError:
             print("Entrada inválida, por favor ingrese un número válido.")
+
 
 if __name__ == "__main__":
     main()
