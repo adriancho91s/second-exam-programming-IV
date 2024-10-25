@@ -59,13 +59,13 @@ Each module operates independently. Start each module using these commands:
 
 ```bash
 # 📚 For Book Management
-python book_manager.py
+python point-1/main.py
 
 # 🏨 For Hotel Reservations
-python hotel_reservation.py
+python point-2/parcial_ii_programacion_iv.py
 
 # 🛒 For Online Store Orders
-python order_management.py
+python point-3/main.py
 ```
 
 ---
@@ -119,7 +119,7 @@ This module allows product management and order placement for an online store.
 1. Display product catalog.
 2. Place orders by specifying product and quantity.
 3. Calculate the total with discounts for bulk purchases.
-4. Save updated inventory in `products.json`.
+4. Save updated inventory in `productos.json`.
 
 > [!IMPORTANT]  
 > Remember to save all data after each session to prevent data loss.
